@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+         <link rel= "stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
         {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         {% endblock %}
 
         {% block javascripts %}
@@ -12,6 +13,94 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">SymBlog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">HOME
+                            <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/loisirs">LOISIRS</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/cv">CV</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/Eportfolio">EPORTFOLIO</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/formulaire">FORMULAIRE</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            {% block body %} {% endblock %}
+        </div>
+        
+        <style>/* Appliquer un fond bleu clair pour imiter l'apparence */
+body {
+    background-color: #add8e6; /* Couleur bleu clair */
+    color: black; /* Couleur du texte pour assurer lisibilité */
+    font-family: Arial, sans-serif; /* Assurez une cohérence des polices */
+}
+
+/* Mettre à jour le conteneur principal */
+.container {
+    background-color: #add8e6; /* Même bleu clair pour tout le conteneur */
+    padding: 20px;
+    border-radius: 5px; /* Coins légèrement arrondis pour un look moderne */
+}
+
+/* Styles pour les titres */
+h1, h2, h3 {
+    color: black;
+    font-weight: bold;
+}
+
+/* Pour le fond noir (ancien style noir) */
+.black-theme {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: black !important; /* Met la même couleur de fond pour la navbar */
+    border-bottom: 2px solid #004080; /* Bordure de couleur bleue pour plus de contraste */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important; /* Changer le texte des liens */
+}
+
+.navbar .nav-link:hover {
+    color: #004080 !important; /* Bleu foncé au survol */
+}
+
+
+p {
+    line-height: 1,5; /* Espacement entre les lignes */
+    text-align: justify ; /* Justifier le texte pour un meilleur rendu */
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+}
+</style>
     </body>
 </html>
