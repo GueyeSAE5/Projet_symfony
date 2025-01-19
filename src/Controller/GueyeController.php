@@ -28,11 +28,11 @@ final class GueyeController extends AbstractController
     public function cv(): Response
     {
         return $this->render('/gueye/cv.html.twig', [
-            'title' => "cv",
+           
         ]);
     }
 
-    #[Route('/loisir', name: 'app_loisir')]
+    #[Route('/loisirs', name: 'app_loisir')]
     public function loisir(): Response
     {
         return $this->render('/gueye/loisir.html.twig', [

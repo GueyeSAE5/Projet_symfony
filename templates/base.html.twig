@@ -39,10 +39,6 @@
                             <a class="nav-link" href="/formulaire">FORMULAIRE</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-sm-2" type="search" placeholder="Search">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -50,13 +46,29 @@
             {% block body %} {% endblock %}
         </div>
         
-        <style>/* Appliquer un fond bleu clair pour imiter l'apparence */
-body {
-    background-color: #add8e6; /* Couleur bleu clair */
-    color: black; /* Couleur du texte pour assurer lisibilité */
-    font-family: Arial, sans-serif; /* Assurez une cohérence des polices */
-}
-
+        <style>
+ <style>
+        body {
+             margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('{{ asset('C:\Users\GUEYE\My_project\public\Image_du_site\Moi.jpg') }}'); /* Chemin de l'image */
+            background-size: cover; /* Ajuste l'image pour couvrir toute la page */
+            background-position: center; /* Centre l'image */
+            background-repeat: no-repeat; /* Empêche la répétition de l'image */
+            height: 100vh; /* Assure que la page prend toute la hauteur de l'écran */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Couleur du texte pour un bon contraste */
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 20%;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ajoute une ombre au texte */
+        }
 /* Mettre à jour le conteneur principal */
 .container {
     background-color: #add8e6; /* Même bleu clair pour tout le conteneur */
@@ -72,8 +84,7 @@ h1, h2, h3 {
 
 /* Pour le fond noir (ancien style noir) */
 .black-theme {
-    background-color: black;
-    color: white;
+    background-image: url('{{ asset('C:\Users\GUEYE\My_project\public\Image_du_site\Moi.jpg') }}');
     padding: 20px;
     border-radius: 5px;
 }
