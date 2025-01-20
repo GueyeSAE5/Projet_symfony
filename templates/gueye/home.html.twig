@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="container mt-4">
-    <h2><em>WELCOME TO MY WORLD</em></h2>
+    <h1><em>WELCOME TO MY WORLD</em></h3>
 
     <!-- Section About Me -->
     <section class="about-me mt-5">
@@ -14,6 +14,47 @@
             So, I am going to introduce you my personal blog.
         </p>
     </section>
+    <style>
+     body {
+             margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('{{ asset('Image_du_site/Moi.jpg') }}'); /* Chemin de l'image */
+            background-size: cover; /* Ajuste l'image pour couvrir toute la page */
+            background-position: center; /* Centre l'image */
+            background-repeat: no-repeat; /* Empêche la répétition de l'image */
+            height: 100vh; /* Assure que la page prend toute la hauteur de l'écran */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Couleur du texte pour un bon contraste */
+            padding: 100px;
+     }
+     .about-me-section {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent noir */
+    color: white; /* Texte en blanc */
+    padding: 20px; /* Espacement intérieur */
+    text-align: center; /* Centre le texte à l'intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    width: 80%; /* Largeur de la bande */
+    margin: 20px auto; /* Centre horizontalement et ajoute de l'espace autour */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ombre légère pour un effet flottant */
+}
+
+.about-me-section h3 {
+    margin-bottom: 10px; /* Espacement en bas du titre */
+    font-size: 2.5rem; /* Taille du titre */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+}
+
+.about-me-section p {
+    font-size: 1.2rem; /* Taille du texte du paragraphe */
+    line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
 </div>
 
 {% endblock %}
