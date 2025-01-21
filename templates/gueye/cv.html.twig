@@ -92,31 +92,25 @@
         </form>
     </div>
      <script>
-        // Récupérer les éléments du formulaire
+        
         const nomInput = document.getElementById('nom');
         const emailInput = document.getElementById('email');
         const downloadLink = document.getElementById('downloadLink');
-
-        // Fonction pour vérifier les champs
         function validateForm() {
             const nomValue = nomInput.value.trim();
             const emailValue = emailInput.value.trim();
-
-            // Vérifie si les deux champs sont remplis
             if (nomValue !== '' && emailValue !== '' && validateEmail(emailValue)) {
-                downloadLink.classList.remove('disabled'); // Active le lien
+                downloadLink.classList.remove('disabled'); 
             } else {
-                downloadLink.classList.add('disabled'); // Désactive le lien
+                downloadLink.classList.add('disabled'); 
             }
         }
-
-        // Fonction pour valider une adresse e-mail
         function validateEmail(email) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
         }
 
-        // Ajoute des événements pour vérifier les champs à chaque modification
+        
         nomInput.addEventListener('input', validateForm);
         emailInput.addEventListener('input', validateForm);
     </script>
@@ -124,8 +118,7 @@
    
 </html>
 <style>
-/* Styles généraux */
-/* Styles généraux */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -143,7 +136,7 @@ body {
 
 }
 
-/* En-tête */
+
 .header {
     display: flex;
     background-color: #000;
@@ -162,8 +155,8 @@ body {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 0; /* Carré */
-    border: 4px solid #f39c12; /* Bordure orange */
+    border-radius: 0;
+    border: 4px solid #f39c12; 
 }
 
 .details {
@@ -192,7 +185,7 @@ body {
     color: orange;
 }
 
-/* Contenu principal */
+
 .content {
     display: flex;
     padding: 20px;
@@ -238,7 +231,7 @@ body {
     padding: 10px;
 }
 
-/* Formation et Compétences */
+
 section {
     margin-bottom: 20px;
 }
@@ -247,7 +240,7 @@ strong {
     font-weight: bold;
 }
 
-/* Styles additionnels */
+
 a {
     color: #f39c12;
     text-decoration: none;
@@ -325,7 +318,7 @@ p {
     background-color: #0056b3;
 }
  footer {
-    color: black; /* Couleur du texte */
+    color: black; 
     text-align: center;
     padding: 10px 0;
 }
