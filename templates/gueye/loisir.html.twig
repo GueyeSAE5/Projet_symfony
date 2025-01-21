@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<body>
+<h1 class="page-title">Découvrez mes hobbies dans ce monde</h1>
+<style>
+  .page-title {
+    position: relative; 
+    top: 20px; 
+    text-align: center; 
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; 
+}
+
+  .container {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 20px; 
+    justify-items: center;
+    align-items: center;
+  }
+
+  .hobby {
+    background-color:rgb(240, 240, 240);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hobby:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .hobby img {
+    width: 300px;
+    height: 480px;
+    object-fit: cover; 
+    border-radius: 5%;
+    margin-bottom: 10px;
+  }
+
+  .hobby h3 {
+    font-size: 18px;
+    color: #333;
+  }
+
+  .hobby p {
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+
+<div class="container">
+  <div class="hobby">
+    <img src="Image_du_site/sortie.jpg" alt="...">
+    <h3>Sortir avec ma famille</h3>
+    <p>Sortir avec ma famille, etre avec eux me fait du bien</p>
+  </div>
+  <div class="hobby">
+    <img src="Image_du_site/etude.jpg" alt="Lecture">
+    <h3>Etude</h3>
+    <p>Etudier et réussir me fait du bien .</p>
+  </div>
+  <div class="hobby">
+    <img src="Image_du_site/musique.jpg" alt="Musique">
+    <h3>Musique</h3>
+    <p>Écouter de la musique me permet de décompresser et de pas stresser dans certaines situations.</p>
+  </div>
+  <div class="hobby">
+    <img src="Image_du_site/série.jpg" alt="Jeux vidéo">
+    <h3>Séries et Films</h3>
+    <p>regarder des séries fait partie de mes passe temps favoris.</p>
+  </div>
+  <div class="hobby">
+    <img src="Image_du_site/Tieboudieune.jpg" alt="...">
+    <h3>Cuisine</h3>
+    <p>Cuisiner des plats sénégalais</p>
+  </div>
+  <div class="hobby">
+    <img src="Image_du_site/voyage.jpg" alt="Voyage">
+    <h3>Voyage</h3>
+    <p>Mon premier voyage pour France</p>
+  </div>
+</div>
+</body>
+{% endblock %}

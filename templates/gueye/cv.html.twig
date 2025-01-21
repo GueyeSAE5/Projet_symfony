@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Baye Niass Gueye</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+{% extends "base.html.twig" %}
+{% block body %}
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,9 +18,10 @@
         .cv-header img {
             border-radius: 50%;
             width: 150px;
-            height: 150px;
+            height: 200px;
             border: 3px solid #ffc107;
             margin-right: 20px;
+             transform: scale(1.2); 
         }
         .cv-header .name-title {
             flex-grow: 1;
@@ -74,18 +69,14 @@
     </style>
 </head>
 <body>
-    <!-- CV Header -->
     <div class="cv-header">
-        <img src="https://via.placeholder.com/150" alt="Photo de Baye Niass Gueye">
+        <img src="Image_du_site/photo_cv.jpg" alt="Photo de Baye Niass Gueye">
         <div class="name-title">
             <h1>Baye Niass Gueye</h1>
-            <p>Administrateur Réseau | Développeur Web</p>
+            <p>Etudiant en BUT Réseau et Télécommunications</p>
         </div>
     </div>
-
-    <!-- CV Content -->
     <div class="container">
-        <!-- Informations personnelles -->
         <div class="section">
             <h2 class="section-title">Informations personnelles</h2>
             <ul>
@@ -95,8 +86,6 @@
                 <li><strong>Email :</strong> <a href="mailto:chebaye04@gmail.com">chebaye04@gmail.com</a></li>
             </ul>
         </div>
-
-        <!-- Expérience professionnelle -->
         <div class="section">
             <h2 class="section-title">Expérience professionnelle</h2>
             <h3>Administrateur Réseau - Videlio</h3>
@@ -105,8 +94,6 @@
                 <li><strong>Description :</strong> J'ai travaillé sur la configuration de réseaux, la création de sites web, la configuration de switchs, et la mise en place de postes clients.</li>
             </ul>
         </div>
-
-        <!-- Formation -->
         <div class="section">
             <h2 class="section-title">Formation</h2>
             <h3>Université Jean Monnet IUT de Roanne</h3>
@@ -114,8 +101,6 @@
                 <li>BUT Réseaux et Télécommunications</li>
             </ul>
         </div>
-
-        <!-- Compétences -->
         <div class="section">
             <h2 class="section-title">Compétences</h2>
             <ul>
@@ -123,12 +108,9 @@
                 <li>Connaissance de l’architecture et des technologies des sites web (HTML, CSS, CMS, JS, responsive design)</li>
                 <li>Expertise en câblage et analyse des signaux</li>
             </ul>
-             <!-- Bouton pour télécharger le CV -->
             <a href="cv_baye_niass_gueye.pdf" download>
             <button class="btn-download">Télécharger le CV</button>
             </a>
-
-        <!-- Lien vers le formulaire -->
             <p style="margin-top: 20px;">
                 <a href="formulaire.html" class="btn btn-primary">Donnez votre avis sur mon CV</a>
             </p>
@@ -136,3 +118,4 @@
     </div>
 </body>
 </html>
+{% endblock %}
