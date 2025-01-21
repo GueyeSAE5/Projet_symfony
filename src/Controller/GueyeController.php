@@ -32,7 +32,7 @@ final class GueyeController extends AbstractController
         ]);
     }
 
-    #[Route('/loisirs', name: 'app_loisir')]
+    #[Route('/loisir', name: 'loisir')]
     public function loisir(): Response
     {
         return $this->render('/gueye/loisir.html.twig', [
@@ -45,14 +45,6 @@ final class GueyeController extends AbstractController
     {
         return $this->render('/gueye/Eportfolio.html.twig', [
             'title' => "Eportfolio",
-        ]);
-    }
-
-    #[Route('/formulaire', name: 'app_formulaire')]
-    public function formulaire(): Response
-    {
-        return $this->render('/gueye/formulaire.html.twig', [
-            'title' => "formulaire",
         ]);
     }
 }

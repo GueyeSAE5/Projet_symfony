@@ -1,121 +1,334 @@
 {% extends "base.html.twig" %}
 {% block body %}
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-        }
-        .cv-header {
-            display: flex;
-            align-items: center;
-            background-color: #343a40;
-            color: white;
-            padding: 20px;
-            border-bottom: 5px solid #ffc107;
-        }
-        .cv-header img {
-            border-radius: 50%;
-            width: 150px;
-            height: 200px;
-            border: 3px solid #ffc107;
-            margin-right: 20px;
-             transform: scale(1.2); 
-        }
-        .cv-header .name-title {
-            flex-grow: 1;
-        }
-        .cv-header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-        .cv-header p {
-            font-size: 18px;
-            margin: 5px 0 0 0;
-            color: #ffc107;
-        }
-        .container {
-            margin: 20px auto;
-            max-width: 900px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .section-title {
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #343a40;
-            border-bottom: 2px solid #ffc107;
-            padding-bottom: 5px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        a {
-            color: #ffc107;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+ <title>CV - Baye Niass Gueye</title>
+    <link rel="stylesheet" href="{{ asset('css/cv.css') }}">
 </head>
 <body>
-    <div class="cv-header">
-        <img src="Image_du_site/photo_cv.jpg" alt="Photo de Baye Niass Gueye">
-        <div class="name-title">
-            <h1>Baye Niass Gueye</h1>
-            <p>Etudiant en BUT Réseau et Télécommunications</p>
+    <div class="cv-container">
+        <!-- En-tête -->
+        <div class="header">
+            <div class="photo">
+                <img src="Image_du_site/tof_cv.jpg" alt="Photo de Baye Niass Gueye">
+            </div>
+            <div class="details">
+                <h1>BAYE NIASS GUEYE</h1>
+                <h2>ETUDIANT BUT RESEAUX ET TELECOMMUNICATIONS</h2>
+                <p>Je suis un étudiant motivé et ambitieux, je me consacre pleinement à mon secteur d'études avec une vision claire de mes objectifs. Persévérant et méthodique, je combine une approche analytique avec une forte créativité pour résoudre les problématiques qui me sont confiées.</p>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="section">
-            <h2 class="section-title">Informations personnelles</h2>
-            <ul>
-                <li><strong>Nom :</strong> Baye Niass Gueye</li>
-                <li><strong>Adresse :</strong> 30 Avenue Carnot</li>
-                <li><strong>Téléphone :</strong> 07 60 08 55 17</li>
-                <li><strong>Email :</strong> <a href="mailto:chebaye04@gmail.com">chebaye04@gmail.com</a></li>
-            </ul>
+
+        <!-- Contenu principal -->
+        <div class="content">
+            <div class="left-column">
+                <section>
+                    <h3>CONTACT</h3>
+                    <ul>
+                        <li>+33 (0)760085517</li>
+                        <li>chebaye04@gmail.com</li>
+                        <li>30 Avenue Carnot, Roanne 42300</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>COMPETENCES</h3>
+                    <ul>
+                        <li>Création de site web</li>
+                        <li>Communication</li>
+                        <li>Expertise en câblage et analyse des signaux</li>
+                        <li>Maîtrise des lois fondamentales de l'électricité</li>
+                        <li>Anglais courant</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>FORMATION</h3>
+                    <ul>
+                        <li>
+                            <strong>BACCALAUREAT SCIENTIFIQUE</strong><br>
+                            Ecole privé catholique Jean Paul II<br>
+                            2022 - 2023
+                        </li>
+                        <li>
+                            <strong>BUT RESEAUX ET TELECOMMUNICATIONS</strong><br>
+                            Université Jean Monnet<br>
+                            2024 - 2025
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="right-column">
+                <section>
+                    <h3>EXPERIENCE</h3>
+                    <h4>BENEVOLAT</h4>
+                    <p>2022 - 2023</p>
+                    <p>Durant ma mission en tant que bénévole, j’ai fait tout le coin des quartiers de Kaolack, Sénégal avec des amis pour donner aux gens des aliments à manger pendant le ramadan pour pouvoir rompre leur ramadan dans la rue.</p>
+
+                    <h4>CAISSIER</h4>
+                    <p>2023 - 2024</p>
+                    <p>Ma mission en tant que caissier était trop sympa. J'ai eu à donner à Mass une idée de faire des tickets électroniques comme dans les grandes cosmétiques. Je faisais aussi le bilan chaque jour.</p>
+                </section>
+            </div>
         </div>
-        <div class="section">
-            <h2 class="section-title">Expérience professionnelle</h2>
-            <h3>Administrateur Réseau - Videlio</h3>
-            <ul>
-                <li><strong>Période :</strong> 04/12/2021 - 04/12/2022</li>
-                <li><strong>Description :</strong> J'ai travaillé sur la configuration de réseaux, la création de sites web, la configuration de switchs, et la mise en place de postes clients.</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2 class="section-title">Formation</h2>
-            <h3>Université Jean Monnet IUT de Roanne</h3>
-            <ul>
-                <li>BUT Réseaux et Télécommunications</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2 class="section-title">Compétences</h2>
-            <ul>
-                <li>Maitrise des lois fondamentales de l'électricité pour les équipements de réseaux et télécommunications</li>
-                <li>Connaissance de l’architecture et des technologies des sites web (HTML, CSS, CMS, JS, responsive design)</li>
-                <li>Expertise en câblage et analyse des signaux</li>
-            </ul>
-            <a href="cv_baye_niass_gueye.pdf" download>
-            <button class="btn-download">Télécharger le CV</button>
-            </a>
-            <p style="margin-top: 20px;">
-                <a href="formulaire.html" class="btn btn-primary">Donnez votre avis sur mon CV</a>
-            </p>
-        </div>
-    </div>
+    </div
 </body>
+</head>
+   <title>Télécharger mon CV</title>
+    
+</head>
+<body>
+    <div class="container">
+
+        
+         <form id="downloadForm" class="formulaire">
+            <label for="nom">Nom complet :</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
+            
+            <label for="message">Message (optionnel) :</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message..."></textarea>
+            <button type="submit" id="download-cv">Télécharger le CV
+            <a href="Image_du_site/CV_Baye_Niass_Gueye.pdf" download="CV_Baye" class="btn-telecharger">
+             </button>
+        </form>
+    </div>
+     <script>
+        // Récupérer les éléments du formulaire
+        const nomInput = document.getElementById('nom');
+        const emailInput = document.getElementById('email');
+        const downloadLink = document.getElementById('downloadLink');
+
+        // Fonction pour vérifier les champs
+        function validateForm() {
+            const nomValue = nomInput.value.trim();
+            const emailValue = emailInput.value.trim();
+
+            // Vérifie si les deux champs sont remplis
+            if (nomValue !== '' && emailValue !== '' && validateEmail(emailValue)) {
+                downloadLink.classList.remove('disabled'); // Active le lien
+            } else {
+                downloadLink.classList.add('disabled'); // Désactive le lien
+            }
+        }
+
+        // Fonction pour valider une adresse e-mail
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Ajoute des événements pour vérifier les champs à chaque modification
+        nomInput.addEventListener('input', validateForm);
+        emailInput.addEventListener('input', validateForm);
+    </script>
+</body>
+   
 </html>
+<style>
+/* Styles généraux */
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(2, 13, 34);
+    color: #333;
+}
+
+.cv-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+
+}
+
+/* En-tête */
+.header {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.photo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0; /* Carré */
+    border: 4px solid #f39c12; /* Bordure orange */
+}
+
+.details {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.details h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.details h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f39c12;
+    margin: 5px 0;
+}
+
+.details p {
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: orange;
+}
+
+/* Contenu principal */
+.content {
+    display: flex;
+    padding: 20px;
+}
+
+.left-column, .right-column {
+    width: 50%;
+}
+
+.left-column h3, .right-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 0px;
+}
+
+.left-column ul, .right-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-column ul li, .right-column ul li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.right-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.right-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px ;
+    color: black;
+    padding: 10px;
+}
+
+/* Formation et Compétences */
+section {
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Styles additionnels */
+a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color
+}
+.container h1{
+    color: white;
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+.formulaire h1 {
+    color: black;
+    padding: 15px;
+}
+.formulaire label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.formulaire input,
+.formulaire textarea,
+.formulaire button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.formulaire textarea {
+    resize: vertical;
+}
+
+.formulaire button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulaire button:hover {
+    background-color: #0056b3;
+}
+ footer {
+    color: black; /* Couleur du texte */
+    text-align: center;
+    padding: 10px 0;
+}
+
+</style>
 {% endblock %}
